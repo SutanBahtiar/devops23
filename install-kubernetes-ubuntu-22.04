@@ -2,6 +2,7 @@
 #
 # this script from https://github.com/ccollicutt/install-kubernetes/blob/main/install-kubernetes.sh
 #
+# kubeadm token create --print-join-command --ttl 0
 
 # this script installs kubernetes on Ubuntu 22.04
 
