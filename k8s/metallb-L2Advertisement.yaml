@@ -4,5 +4,5 @@ metadata:
   name: sandbox-l2
   namespace: metallb-system
 spec:
-  ipAddressPool:
+  ipAddressPools:
   - first-pool
