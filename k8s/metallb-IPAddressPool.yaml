@@ -1,0 +1,9 @@
+apiVersion: metallb.io/v1beta1
+kind: IPAdressPool
+metadata:
+  name: first-pool
+  namespace: metallb-system
+spec:
+  addressess:
+  - 10.50.50.50-10.50.50.100
+  
