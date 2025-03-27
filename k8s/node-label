@@ -1,0 +1,15 @@
+NAME         STATUS     ROLES           AGE   VERSION
+k8s          Ready      control-plane   17h   v1.31.0
+k8s-worker   NotReady   <none>          14h   v1.31.0
+
+kubectl label node k8s node-role.kubernetes.io/master=master
+
+NAME         STATUS     ROLES                  AGE   VERSION
+k8s          Ready      control-plane,master   18h   v1.31.0
+k8s-worker   NotReady   <none>                 14h   v1.31.0
+
+kubectl label node k8s node-role.kubernetes.io/worker=worker
+
+AME         STATUS     ROLES                         AGE   VERSION
+k8s          Ready      control-plane,master,worker   18h   v1.31.0
+k8s-worker   NotReady   <none>                        14h   v1.31.0
