@@ -4,6 +4,6 @@ metadata:
   name: first-pool
   namespace: metallb-system
 spec:
-  addressess:
+  addresses:
   - 10.50.50.50-10.50.50.100
   
