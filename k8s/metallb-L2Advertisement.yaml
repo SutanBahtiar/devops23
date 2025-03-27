@@ -1,0 +1,8 @@
+apiVersion: metallb.io/v1beta1
+kind: L2Adverstisement
+metadata:
+  name: sandbox-l2
+  namespace: metallb-system
+spec:
+  ipAddressPool:
+  - first-pool
