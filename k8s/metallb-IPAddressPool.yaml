@@ -1,5 +1,5 @@
 apiVersion: metallb.io/v1beta1
-kind: IPAdressPool
+kind: IPAddressPool
 metadata:
   name: first-pool
   namespace: metallb-system
