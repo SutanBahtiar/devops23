@@ -234,7 +234,8 @@ function install_cni(){
 function install_metrics_server(){
   echo "Installing metrics server"
   {
-    kubectl apply -f manifests/metrics-server.yaml
+    # kubectl apply -f manifests/metrics-server.yaml
+    kubectl apply -f https://raw.githubusercontent.com/SutanBahtiar/devops23/refs/heads/master/k8s/manifest/metrics-server.yaml
     # TODO: wait for metrics server to be ready
   } 3>&2 >> $LOG_FILE 2>&1
 }
