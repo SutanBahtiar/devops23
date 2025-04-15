@@ -33,8 +33,6 @@ EOF
 
 ## create token
 ```
-vault token create -orphan -policy="java-dev" -period=43800h
-
 -orphan
       Create the token with no parent. This prevents the token from being
       revoked when the token which created it expires. Setting this value
@@ -49,6 +47,9 @@ vault token create -orphan -policy="java-dev" -period=43800h
       do not expire (unless -explicit-max-ttl is also provided). Setting this
       value requires sudo permissions. This is specified as a numeric string
       with suffix like "30s" or "5m".
+
+
+vault token create -orphan -policy="java-dev" -period=43800h
 
 WARNING! The following warnings were returned from Vault:
 
