@@ -43,4 +43,9 @@ env SSHPASS="password" \
 sshpass -d 123 \
 ssh -o ProxyCommand="sshpass -P assphrase -e ssh -W %h:%p user@server1 -p 2222" \
 user@server2 -p 2222 123<<<"password2"
+
+env SSHPASS="jenkins" \
+  sshpass -d 123 \
+  scp -P 2222 -o ProxyCommand="sshpass -P assphrase -e ssh -W %h:%p user@server1 -p 2222" \
+  file.yaml user@server2:/home/java/deployment/. 123<<<"Danareksa2023#"
 ```
