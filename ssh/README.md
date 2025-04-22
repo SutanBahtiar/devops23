@@ -49,3 +49,8 @@ env SSHPASS="password" \
   scp -P 2222 -o ProxyCommand="sshpass -P assphrase -e ssh -W %h:%p user@server1 -p 2222" \
   file.yaml user@server2:/home/java/deployment/. 123<<<"password2"
 ```
+
+## tunnel/port-forward
+```
+ssh -p 2222 -N user@server1 -L portlocal:server2:portserver
+```
