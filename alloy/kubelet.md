@@ -48,14 +48,13 @@ subjects:
 sudo microk8s kubectl -n kube-system create token prometheus-external
 ```
 
-### test
-```
-curl --cacert /etc/prometheus/ca.crt   -H "Authorization: Bearer $(cat /etc/prometheus/token)"   https://10.128.0.2:10250/metrics
-```
-
-### create ca.crt
+### get ca
 ```
 sudo microk8s kubectl config view --raw -o jsonpath='{.clusters[0].cluster.certificate-authority-data}' | base64 -d > ca.crt
 ```
 
+### test
+```
+curl --cacert /etc/prometheus/ca.crt   -H "Authorization: Bearer $(cat /etc/prometheus/token)"   https://10.128.0.2:10250/metrics
+```
 
