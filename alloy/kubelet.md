@@ -15,6 +15,7 @@ rules:
   resources:
     - nodes
     - nodes/proxy
+    - node/metrics
     - services
     - endpoints
     - pods
@@ -45,6 +46,11 @@ subjects:
 ### create token
 ```
 sudo microk8s kubectl -n kube-system create token prometheus-external
+```
+
+### test
+```
+curl --cacert /etc/prometheus/ca.crt   -H "Authorization: Bearer $(cat /etc/prometheus/token)"   https://10.128.0.2:10250/metrics
 ```
 
 ### create ca.crt
