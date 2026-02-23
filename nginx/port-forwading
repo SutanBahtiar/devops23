@@ -1,0 +1,10 @@
+stream {
+    upstream backend_api {
+        server real-upstream-api.com:443;
+    }
+
+    server {
+        listen 443;
+        proxy_pass backend_api;
+    }
+}
